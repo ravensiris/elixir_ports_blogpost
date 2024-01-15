@@ -1,13 +1,7 @@
-{
-  pkgs,
-  next_ls,
-  ...
-}: let
+{pkgs, ...}: let
   erlang = pkgs.beam.packages.erlangR26;
-  elixir = erlang.elixir_1_16;
+  elixir = erlang.elixir_1_15;
   node = pkgs.nodejs_20;
-  # elixir 1.16 broken for elixir-ls rn
-  elixir-ls = erlang.elixir-ls.override {elixir = erlang.elixir_1_15;};
 in {
   dotenv.enable = true;
   env.LANG = "en_US.UTF-8";
@@ -32,7 +26,6 @@ in {
       nodePackages_latest.prettier
     ]
     ++ [
-      elixir-ls
       node
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [

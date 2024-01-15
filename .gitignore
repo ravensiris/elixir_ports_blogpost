@@ -46,3 +46,6 @@ devenv.local.nix
 # pre-commit
 .pre-commit-config.yaml
 
+/.nix-hex
+/.nix-mix
+/.elixir-tools
