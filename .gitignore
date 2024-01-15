@@ -35,3 +35,14 @@ elixir_ports_blogpost-*.tar
 npm-debug.log
 /assets/node_modules/
 
+
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
+
