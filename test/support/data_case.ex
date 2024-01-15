@@ -18,12 +18,12 @@ defmodule ElixirPortsBlogpost.DataCase do
 
   using do
     quote do
-      alias ElixirPortsBlogpost.Repo
-
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
       import ElixirPortsBlogpost.DataCase
+
+      alias ElixirPortsBlogpost.Repo
     end
   end
 

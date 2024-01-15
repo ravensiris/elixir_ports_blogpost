@@ -20,14 +20,14 @@ defmodule ElixirPortsBlogpostWeb.ConnCase do
   using do
     quote do
       # The default endpoint for testing
-      @endpoint ElixirPortsBlogpostWeb.Endpoint
-
       use ElixirPortsBlogpostWeb, :verified_routes
 
       # Import conveniences for testing with connections
-      import Plug.Conn
-      import Phoenix.ConnTest
       import ElixirPortsBlogpostWeb.ConnCase
+      import Phoenix.ConnTest
+      import Plug.Conn
+
+      @endpoint ElixirPortsBlogpostWeb.Endpoint
     end
   end
 
