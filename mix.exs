@@ -52,6 +52,8 @@ defmodule ElixirPortsBlogpost.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:plug_cowboy, "~> 2.5"},
       {:erlport, "~> 0.11.0"},
+      {:unpickler, "~> 0.1.0"},
+      {:timex, "~> 3.7"},
 
       # static analysis
       {:styler, "~> 0.11", only: [:dev, :test], runtime: false}
