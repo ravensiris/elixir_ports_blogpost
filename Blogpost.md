@@ -192,6 +192,21 @@ Here's an example for `datetime.date` object:
 
 As you can see sometimes for values that dont fit in a `char` size(byte) the value gets split into 2 or more chars and needs to be converted.
 
+And for the last part we kill Python using:
+
+```elixir
+:python.stop(python)
+```
+
+# Caveats
+
+The way of starting up a Python process and killing it at the end of a function is not only inefficient but also might leave us with a [zombie process](https://en.wikipedia.org/wiki/Zombie_process). You also might lose some nice benefits of caching on the Python side
+
+For a more sane approach I'd suggest wrapping the Python process in a [GenServer](https://hexdocs.pm/elixir/GenServer.html).
+This way the process would be supervised and you will get some benefits for running the interpreter for longer than a single function call.
+
+This would be extremely important if you have some long running tasks to execute from Python.
+
 # To finish it up
 
 I generated a cool UI using [Vercel's V0](https://v0.dev/) generative UI AI tool.
