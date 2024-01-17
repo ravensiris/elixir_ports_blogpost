@@ -18,6 +18,7 @@ defmodule ElixirPortsBlogpostWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/:page", PageController, :home
   end
 
   # Other scopes may use custom stacks.
