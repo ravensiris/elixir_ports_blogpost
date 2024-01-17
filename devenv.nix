@@ -42,6 +42,10 @@ in {
     package = node;
   };
 
+  languages.python = {
+    enable = true;
+  };
+
   services.postgres = {
     enable = true;
     initialScript = ''
