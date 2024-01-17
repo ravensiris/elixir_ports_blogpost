@@ -49,3 +49,6 @@ devenv.local.nix
 /.nix-hex
 /.nix-mix
 /.elixir-tools
+
+__pycache__/
+venv/
